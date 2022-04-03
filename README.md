@@ -1,3 +1,6 @@
+A conversion to work with hardware serial. The class refers to a local object SoftwareSerial. Not sure how that is implimented given that is uses an object in an external library. Need to replicate with the hardware Serial3 object.
+
+
 ## Sim800L Arduino Library revised
 This is a high school project.
 The purpose of this library is to use the sim800L module in the simplest and most transparent way.

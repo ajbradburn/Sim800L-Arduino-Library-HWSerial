@@ -35,7 +35,7 @@
 
 #define DEBUG 1
 
-#define COM_DELAY 100
+#define COM_DELAY 40
 
 Sim800L::Sim800L(void)
 {
@@ -447,7 +447,6 @@ bool Sim800L::sendSms(char* number,char* text)
     _buffer=_readSerial();
     delay(COM_DELAY);
     Serial3.print((String) "AT+CMGS=\"" + number + "\"\r" + text + "\r");  	// command to send sms
-    delay(COM_DELAY);
     _buffer=_readSerial();
     delay(COM_DELAY);
     Serial3.print((char)26);

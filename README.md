@@ -1,22 +1,18 @@
-A conversion to work with hardware serial. The class refers to a local object SoftwareSerial. Not sure how that is implimented given that is uses an object in an external library. Need to replicate with the hardware Serial3 object.
-
-
 ## Sim800L Arduino Library revised
-This is a high school project.
-The purpose of this library is to use the sim800L module in the simplest and most transparent way.
+This is a conversion of a library by vittorioexp.
+His library was designed to use SoftwareSerial, and this one is designed to use hardware serial.
+
+Additionally, his implimentation seems to have been designed for the Sim800L V1.0, while this one is designed to work with the Sim800L V2.0.
+For example, the reset pin operation on the Sim800L V2.0 behaves in an inverted manner to the way it was implimented in his original library.
 
 Original version by:   [Cristian Steib] (https://github.com/cristiansteib)
-
 
 ## connections & pinouts (DEFAULT)
 Arduino Uno  |   Sim800L   |    Notes  
 -------------|-------------|------------
 +5v| (3.8v)~(4.4v)!| Power supply input
-10 RX_PIN | TX |  
-11 TX_PIN | RX |
 2   RESET_PIN | RST| Reset Pin
 GND | GND | 
-
 
 * If it returns true there is an error
 
